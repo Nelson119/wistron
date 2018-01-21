@@ -1,0 +1,33 @@
+
+/*左側據點內容*/
+
+.services-location {
+    float: left;
+    margin-bottom: 32px;
+}
+
+.location-map {
+    position: relative;
+}
+
+.time-count-wrapper {
+    position: relative;
+}
+
+.desc {
+    width: 300px;
+    height: 64px;
+    background: linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,1) 100%);
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 70px;
+    padding-right: 50px;
+    line-height: 32px;
+}
+
+.desc h5 {
+    font-size: 20px;
+    margin-bottom: 5px; 
+}

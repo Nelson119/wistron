@@ -1,0 +1,36 @@
+@@include('skin/front.html',{
+	"title": "title",
+	"description": "description",
+	"keywords": "keywords",
+	"site": "site",
+	"url": "url",
+	"image": "image",
+	"icon": "icon",
+	"date": "{{date}}"
+})
+
+
+	@@include('common/header.html', {
+        "active1": "class=\"active\" ",
+        "active2": "",
+        "active3": "",
+        "active4": "",
+        "active5": ""
+    })
+
+    <div class="wrap">
+        <div class="content-wrap">
+            @@include('components/index/left-menu-wrapper.html')
+            @@include('components/index/middle-content-wrapper.html')
+            @@include('components/index/right-link-wrapper.html')
+        </div>
+        <div class="sec-content-wrap">
+            @@include('components/index/services-location.html')
+            @@include('components/index/video-gallery-area.html')
+        </div>
+        @@include('components/index/recommend-area-wrap.html')
+    </div>
+
+	@@include('common/footer.html')
+
+@@include('skin/butt.html')

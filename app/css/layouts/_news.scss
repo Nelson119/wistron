@@ -1,0 +1,95 @@
+
+
+.news-title-info {
+    margin-top: 24px;
+}
+
+.news-title-info h3 {
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+}
+
+.news-title-info p {
+    color: #828282;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/*新聞詳細頁面*/
+
+.edit-area {
+    color: #4a4a4a;
+}
+
+.edit-area img {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.edit-area p {
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.keyword-tag {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.download-area {
+    border-bottom: 1px solid #ccc;
+}
+
+.download-img:first-child {
+    margin-right: 5px;
+}
+
+.page-btn-wrapper {
+    margin: 32px 0;
+}
+
+.page-btn-wrapper ul {
+    text-align: center;
+}
+
+.page-btn-wrapper li {
+    display: inline-block;
+}
+
+.page-btn-wrapper ul li:first-child {
+    float: left;
+}
+
+li.invisable:after {
+    content: '';
+    display: block;
+    width: 68px;
+    height: 20px;
+}
+
+.page-btn-wrapper ul li:last-child {
+    float: right;
+}
+
+.prev-post,
+.next-post {
+    margin: 0 20px;
+}
+
+.page-btn-wrapper i {
+    vertical-align: text-bottom;
+    font-size: 20px;
+}
+
+.first-post a:after {
+    content: '第一則';
+}
+
+.prev-post a:after {
+    content: '上一則';
+}
+
+.next-post a:before {
+    content: '下一則';
+}

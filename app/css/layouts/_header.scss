@@ -1,0 +1,77 @@
+
+
+/*上版開始*/
+
+#header {
+    width: 1280px;
+    height: 140px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo a {
+    display: block;
+    width: 348px;
+    height: 80px;
+    background: url('../img/top-logo.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: -9999px;
+}
+
+.header-background-img {
+    background: url('../img/top-imgs.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    width: 260px;
+    height: 140px;
+    position: absolute;
+    right: 0
+}
+
+.header-wrap {
+    position: relative;
+    background: linear-gradient(to right, #007fad, #00668c);
+}
+
+.header-wrapper {
+    background: rgba(0, 94, 128, 0.5);
+    height: 60px;
+    border-bottom: 2px solid #cbf87c;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.topper-menu {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.topper-menu li {
+    display: inline-block;
+}
+
+.topper-menu li a {
+    font-size: 18px;
+    line-height: 60px;
+    margin: 0 12px;
+    color: #fff;
+    opacity: 0.8;
+    padding: 14px 0;
+}
+
+.topper-menu li a:hover,
+.topper-menu li a.active {
+    color: #cbf87c;
+    opacity: 1;
+    border-bottom: 4px solid #cbf87c;
+    transition: color 1s;
+    transition: opacity 1s;
+}
+
+
+/*上版結束*/

@@ -1,0 +1,19 @@
+
+/*第二內容開始*/
+
+.sec-content-wrap {
+    background: #f6f6f6;
+    padding: 0 44px;
+}
+
+.sec-content-wrap:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.video-gallery-area h3,
+.services-location h3 {
+    color: #006990;
+    margin-bottom: 20px;
+}

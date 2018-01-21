@@ -1,0 +1,96 @@
+
+/*底板區塊*/
+
+footer {
+    width: 100%;
+    height: 200px;
+    background: #bcbcbc;
+}
+
+.footer-wrap {
+    display: table;
+    height: 200px;
+    padding: 20px 0;
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-logo {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 2px solid #fff;
+    width: 30%;
+}
+
+.ip-location {
+    position: absolute;
+    right: 0;
+    padding: 8px 36px;
+}
+
+.events2016, .events2015, .events2014 {
+	display: none;
+}
+
+.sign, .department {
+    display: none;
+}
+
+.companys {
+    display: none;
+}
+
+div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+    border-radius: 50%;
+}
+
+#nav {
+    float: none;
+    position: absolute;
+    top: 50%;
+}
+
+div.nav-controls {
+    float: none;
+}
+
+div.controls {
+    margin-top: 0;
+}
+
+.nav-controls a.prev, .nav-controls a.next {
+    font-family: 'FontAwesome';
+    color: #333;
+}
+
+.nav-controls a.prev:hover, .nav-controls a.next:hover {
+    color: #fff;
+}
+
+.nav-controls a.next {
+    margin-left: 740px;
+}
+
+.tags {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.btn-wrapper {
+    background: #f0f0f0;
+}
+
+.scroll-btn {
+    display: block;
+    width: 196px;
+    height: 49px;
+    position: relative;
+}
+
+.scroll-btn i {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+}

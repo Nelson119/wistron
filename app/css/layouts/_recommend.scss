@@ -1,0 +1,134 @@
+
+/*推薦專區*/
+
+.recommend-area-wrap {
+    background: #f6f6f6;
+    padding: 0 44px;
+    padding-bottom: 60px;
+}
+
+.recommend-area-wrap h3 {
+    color: #006990;
+    margin-bottom: 29px;
+}
+
+.rec-info {
+    width: 196px;
+    height: 148px;
+    position: relative;
+    float: left;
+    /*cursor: pointer;*/
+}
+
+.rec-desc {
+    position: absolute;
+    text-align: center;
+    width: 196px;
+    height: 32px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    line-height: 32px;
+    transition: height .3s;
+}
+
+.rec-info .rec-desc a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.rec-desc p {
+    color: #ebebeb;
+    line-height: 1.5;
+}
+
+.rec-desc:hover {
+    height: 110px;
+}
+
+.recommend-area-wrap:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -20px;
+}
+
+.owl-dot.active span {
+    background: #006990 !important;
+}
+
+.owl-prev {
+    left: 0;
+}
+
+.owl-next {
+    right: 0;
+}
+
+#gallery-area .owl-prev,
+#gallery-area .owl-next {
+    position: absolute;
+    top: 0;
+    height: 180px;
+    width: 20px;
+    line-height: 180px;
+    margin: 0;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#gallery-area .owl-prev:after {
+    content: "\f053";
+    font-family: 'fontAwesome';
+}
+
+#gallery-area .owl-next:after {
+    content: "\f054";
+    font-family: 'fontAwesome';
+}
+
+#recommend-area .owl-prev,
+#recommend-area .owl-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+}
+
+#recommend-area .owl-nav .owl-prev,
+#video-gallery .owl-nav .owl-prev, .gallery-page-btn .prev-btn {
+    width: 30px;
+    height: 30px;
+    background: url('../img/PrevBtn.png') no-repeat;
+    text-indent: -9999px;
+    transition: background .3s;
+}
+
+#recommend-area .owl-nav .owl-next,
+#video-gallery .owl-nav .owl-next, .gallery-page-btn .next-btn {
+    width: 30px;
+    height: 30px;
+    background: url('../img/NextBtn.png') no-repeat;
+    text-indent: -9999px;
+    transition: background .3s;
+}
+
+#recommend-area .owl-nav .owl-prev:hover,
+#video-gallery .owl-nav .owl-prev:hover,
+.gallery-page-btn .prev-btn:hover {
+    background: url('../img/PrevBtn-hover.png') no-repeat;
+}
+
+#recommend-area .owl-nav .owl-next:hover,
+#video-gallery .owl-nav .owl-next:hover,
+.gallery-page-btn .next-btn:hover {
+    background: url('../img/NextBtn-hover.png') no-repeat;
+}

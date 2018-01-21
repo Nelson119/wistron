@@ -1,0 +1,26 @@
+$icon-font-path: '../fonts/';
+@import "common/webfonts";
+@import "common/override";
+// bower:scss
+@import "vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import "common/vbox";
+@import "common/variables";
+@import "common/global";
+@import "common/scratch";
+@import "common/side";
+@import "layouts/header";
+@import "layouts/footer";
+.wrap{
+    @import "common/side";
+    @import "layouts/main";
+    div{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+    }
+}
+html.ie{
+}

@@ -1,0 +1,77 @@
+@import "mid";
+@import "member";
+@import "news";
+@import "gallery";
+@import "tabs";
+@import "video";
+@import "right";
+@import "tabs";
+@import "location";
+@import "recommend";
+@import "second";
+
+
+
+/*內容開始*/
+
+.content-wrap {
+    background: #f6f6f6;
+    padding: 0 44px;
+    padding-top: 32px;
+}
+
+.content-wrap:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.page-title-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.page-title-wrapper-right {
+    float: right;
+}
+
+.h2-title {
+    /*display: table-cell;*/
+    width: 80%;
+    position: relative;
+}
+
+.h2-title h2 {
+    padding: 10px 0;
+    color: #4a4a4a;
+    font-size: 32px;
+    width: 852px;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+}
+
+.left-menu-wrapper,
+.middle-content-wrapper,
+.right-link-wrapper {
+    float: left;
+}
+
+.right-link-wrapper {
+    float: right;
+}
+
+.middle-content-wrapper {
+    width: 640px;
+    margin-left: 16px;
+    margin-right: 20px;
+}
+
+.left-menu-wrapper:after,
+.middle-content-wrapper:after,
+.right-link-wrapper:after,
+.photo-album-wrapper:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+

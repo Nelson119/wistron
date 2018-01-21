@@ -1,0 +1,83 @@
+
+
+
+/*團隊頁面*/
+
+.services-location-wrapper {
+    margin-top: 30px;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+.services-location-wrapper:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.location-img {
+    width: 45%;
+    float: left;
+}
+
+.location-img img {
+    width: 280px;
+    height: auto;
+}
+
+.location-info-wrapper {
+    width: 55%;
+    float: left;
+}
+
+.location-info-wrapper h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #006990
+}
+
+.location-info-wrapper p {
+    line-height: 1.2;
+}
+
+.team-group {
+    margin: 32px 0;
+    width: 1280px;
+}
+
+.team-group:after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.team-group h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.scroll {
+    width: 640px;
+    height: 250px;
+    overflow-y: hidden;
+}
+
+.member-desc {
+    float: left;
+    text-align: center;
+    margin-right: 14px;
+}
+
+.member-desc:first-child {
+    margin-left: 0;
+}
+
+.member-desc:last-child {
+    margin-right: 0;
+}
+
+.member-desc h4 {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}

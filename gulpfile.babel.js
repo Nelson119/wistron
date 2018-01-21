@@ -46,7 +46,7 @@ function lint(files, options) {
 
 gulp.task('lint', lint('app/js/**/*.js'));
 
-gulp.task('html', () => {
+gulp.task('html', ['css', 'js', 'baker'], () => {
     return gulp.src('.tmp/*.html')
         .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
         .pipe($.if(/vendor\.js$/, gulp.dest('dist')))

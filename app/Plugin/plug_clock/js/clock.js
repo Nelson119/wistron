@@ -18,7 +18,12 @@ $(document).ready(function() {
 	  rotateHands(document.getElementById('hourHand'), (hrs*30)+(currentTime.getMinutes()*6)/12);
 	}
 
-	updateTime();
-	window.setInterval(updateTime, 1000);
+	if(document.getElementById('secondHand')!=null && 
+			document.getElementById('minuteHand')!=null && 
+			document.getElementById('hourHand')!=null){
+		updateTime();
+		window.setInterval(updateTime, 1000);
+	}
+	
 
 });

@@ -20,4 +20,4 @@ install:
 - cp -r ../dist/* ./
 - git add .
 - git commit -m "Deployed to Github Pages"
-- git push --quiet origin gh-pages
+- git push --quiet -f origin gh-pages

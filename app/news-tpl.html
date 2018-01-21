@@ -1,0 +1,32 @@
+@@include('skin/front.html',{
+	"title": "title",
+	"description": "description",
+	"keywords": "keywords",
+	"site": "site",
+	"url": "url",
+	"image": "image",
+	"icon": "icon",
+	"date": "{{date}}"
+})
+
+
+	@@include('common/header.html', {
+        "active1": "",
+        "active2": "class=\"active\" ",
+        "active3": "",
+        "active4": "",
+        "active5": ""
+    })
+
+    <div class="wrap">
+        <div class="content-wrap">
+            @@include('common/page-title-wrapper.html', {"title": "News Center"})
+            @@include('components/news/left-menu-wrapper.html')
+            @@include('components/news/middle-content-wrapper.html')
+            @@include('common/right-link-wrapper.html')
+        </div>
+    </div>
+
+	@@include('common/footer.html')
+
+@@include('skin/butt.html')

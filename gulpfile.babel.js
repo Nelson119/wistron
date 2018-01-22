@@ -114,7 +114,7 @@ gulp.task('fileinclude', function() {
 gulp.task('serve', ['css', 'js', 'fonts', 'fileinclude'], () => {
     browserSync({
         notify: false,
-        port: 9000,
+        port: 9050,
         server: {
             baseDir: ['.tmp', 'app'],
             routes: {
@@ -143,7 +143,7 @@ gulp.task('serve', ['css', 'js', 'fonts', 'fileinclude'], () => {
 gulp.task('serve:dist', () => {
     browserSync({
         notify: false,
-        port: 9000,
+        port: 9060,
         server: {
             baseDir: ['dist'],
             routes: {
@@ -154,7 +154,7 @@ gulp.task('serve:dist', () => {
 gulp.task('origin', () => {
     browserSync({
         notify: false,
-        port: 9000,
+        port: 9090,
         server: {
             baseDir: ['html'],
             routes: {
@@ -189,6 +189,7 @@ gulp.task('embed', ['html', 'img', 'fonts', 'extras'], () => {
         .pipe($.replace(/{{date}}/ig, date))
         // .pipe($.debug())
         .pipe($.bom())
+        .pipe($.htmlBeautify({indentSize: 2}))
         .pipe(gulp.dest('dist'));
 });
 

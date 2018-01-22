@@ -14,11 +14,23 @@
 .topnews-tip {
     padding: 10px 0;
     background: #eee;
+
+    ul{
+        display: inline-block;
+        width: 90%;
+        height: 1.5em;
+        overflow: hidden;
+        li{
+            display: block;
+            white-space: nowrap;
+        }
+    }
 }
 
 .topnews-tip img {
     margin-left: 6px;
     margin-right: 13px;
+    vertical-align: top;
 }
 
 .header-news-title {

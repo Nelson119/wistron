@@ -1,7 +1,14 @@
+'use strict';
+/*eslint-disable new-cap, no-unused-vars,
+	no-use-before-define, no-trailing-spaces, space-infix-ops, comma-spacing,
+	no-mixed-spaces-and-tabs, no-multi-spaces, camelcase, no-loop-func,no-empty,
+	key-spacing ,curly, no-shadow, no-return-assign, no-redeclare, no-unused-vars,
+	eqeqeq, no-extend-native, quotes , no-inner-declarations*/
+/*global  $ */
 $(document).ready(function() {
 
     //相簿集輪播
-    $("#gallery-area").owlCarousel({
+    $('#gallery-area').owlCarousel({
         autoplay: true,
         autoplayTimeout: 3000,
         nav: true,
@@ -10,11 +17,11 @@ $(document).ready(function() {
         items: 1,
         autoWidth: true,
         center: true,
-        navText: ["", ""]
+        navText: [', ']
     });
 
     //推薦專區輪播
-    $("#recommend-area").owlCarousel({
+    $('#recommend-area').owlCarousel({
         autoplay: true,
         autoplayTimeout: 3000,
         nav: true,
@@ -28,7 +35,7 @@ $(document).ready(function() {
     });
 
     //廣告區塊輪播
-    $("#ad-area1").owlCarousel({
+    $('#ad-area1').owlCarousel({
         autoplay: true,
         autoplayTimeout: 2000,
         loop: true,
@@ -36,10 +43,10 @@ $(document).ready(function() {
         autoplayHoverPause: true,
         autoWidth: true,
         items: 1,
-        center: true,
+        center: true
     });
 
-    $("#ad-area2").owlCarousel({
+    $('#ad-area2').owlCarousel({
         autoplay: true,
         autoplayTimeout: 2000,
         loop: true,
@@ -47,10 +54,10 @@ $(document).ready(function() {
         autoplayHoverPause: true,
         autoWidth: true,
         item: 1,
-        center: true,
+        center: true
     });
 
-    $("#ad-area3").owlCarousel({
+    $('#ad-area3').owlCarousel({
         autoplay: true,
         autoplayTimeout: 2000,
         loop: true,
@@ -61,7 +68,7 @@ $(document).ready(function() {
         center: true
     });
 
-    $("#ad-area4").owlCarousel({
+    $('#ad-area4').owlCarousel({
         autoplay: true,
         autoplayTimeout: 2000,
         loop: true,
@@ -72,7 +79,7 @@ $(document).ready(function() {
         center: true
     });
 
-    $("#ad-area5").owlCarousel({
+    $('#ad-area5').owlCarousel({
         autoplay: true,
         autoplayTimeout: 2000,
         loop: true,
@@ -84,7 +91,7 @@ $(document).ready(function() {
     });
 
     // 相簿列表頁輪播
-    $("#video-gallery").owlCarousel({
+    $('#video-gallery').owlCarousel({
         autoplay: true,
         autoplayTimeout: 3000,
         nav: true,
@@ -99,12 +106,12 @@ $(document).ready(function() {
 
     // 大事紀頁籤切換
     // 預設顯示第一個 Tab
-    var _showTab = 0;
+    var showTab = 0;
     $('.location-tab').each(function() {
         // 目前的頁籤區塊
         var $tab = $(this);
 
-        var $defaultLi = $('ul.tabs li', $tab).eq(_showTab).addClass('active');
+        var $defaultLi = $('ul.tabs li', $tab).eq(showTab).addClass('active');
         $($defaultLi.find('a').attr('href')).siblings().hide();
 
         // 當 li 頁籤被點擊時...
@@ -112,12 +119,12 @@ $(document).ready(function() {
         $('ul.tabs li', $tab).click(function() {
             // 找出 li 中的超連結 href(#id)
             var $this = $(this),
-                _clickTab = $this.find('a').attr('href');
+                clickTab = $this.find('a').attr('href');
             // 把目前點擊到的 li 頁籤加上 .active
             // 並把兄弟元素中有 .active 的都移除 class
             $this.addClass('active').siblings('.active').removeClass('active');
             // 淡入相對應的內容並隱藏兄弟元素
-            $(_clickTab).stop(false, true).fadeIn().siblings().hide();
+            $(clickTab).stop(false, true).fadeIn().siblings().hide();
 
             return false;
         }).
@@ -128,68 +135,68 @@ $(document).ready(function() {
 
     // 大事紀年份卷軸切換
     var scrolled = 0;
-    $(".scroll-btn").click(function() {
+    $('.scroll-btn').click(function() {
         scrolled = scrolled + 300;
-        $(".cyears-tabs").animate({
+        $('.cyears-tabs').animate({
             scrollTop: scrolled
         });
     });
 
     // 大事紀客戶DEMO用
-    $("#2017events").click(function() {
-        $(".events2017").fadeIn(500);
-        $(".events2016").hide();
-        $(".events2015").hide();
-        $(".events2014").hide();
+    $('#2017events').click(function() {
+        $('.events2017').fadeIn(500);
+        $('.events2016').hide();
+        $('.events2015').hide();
+        $('.events2014').hide();
     });
 
-    $("#2016events").click(function() {
-        $(".events2016").fadeIn(500);
-        $(".events2017").hide();
-        $(".events2014").hide();
-        $(".events2015").hide();
+    $('#2016events').click(function() {
+        $('.events2016').fadeIn(500);
+        $('.events2017').hide();
+        $('.events2014').hide();
+        $('.events2015').hide();
     });
 
-    $("#2015events").click(function() {
-        $(".events2015").fadeIn(500);
-        $(".events2016").hide();
-        $(".events2017").hide();
-        $(".events2014").hide();
+    $('#2015events').click(function() {
+        $('.events2015').fadeIn(500);
+        $('.events2016').hide();
+        $('.events2017').hide();
+        $('.events2014').hide();
     });
 
-    $("#2014events").click(function() {
-        $(".events2014").fadeIn(500);
-        $(".events2015").hide();
-        $(".events2016").hide();
-        $(".events2017").hide();
+    $('#2014events').click(function() {
+        $('.events2014').fadeIn(500);
+        $('.events2015').hide();
+        $('.events2016').hide();
+        $('.events2017').hide();
     });
 
-    $("#company").click(function() {
-        $(".company").fadeIn(500);
-        $(".sign").hide();
-        $(".department").hide();
+    $('#company').click(function() {
+        $('.company').fadeIn(500);
+        $('.sign').hide();
+        $('.department').hide();
     });
 
-    $("#sign").click(function() {
-        $(".sign").fadeIn(500);
-        $(".department").hide();
-        $(".company").hide();
+    $('#sign').click(function() {
+        $('.sign').fadeIn(500);
+        $('.department').hide();
+        $('.company').hide();
     });
 
-    $("#department").click(function() {
-        $(".department").fadeIn(500);
-        $(".company").hide();
-        $(".sign").hide();
+    $('#department').click(function() {
+        $('.department').fadeIn(500);
+        $('.company').hide();
+        $('.sign').hide();
     });
 
-    $("#allnews").click(function() {
-        $(".allnews").fadeIn(500);
-        $(".companys").hide();
+    $('#allnews').click(function() {
+        $('.allnews').fadeIn(500);
+        $('.companys').hide();
     });
 
-    $("#companys").click(function() {
-        $(".companys").fadeIn(500);
-        $(".allnews").hide();
+    $('#companys').click(function() {
+        $('.companys').fadeIn(500);
+        $('.allnews').hide();
     });
 
     // 相簿集詳細輪播
@@ -251,4 +258,16 @@ $(document).ready(function() {
             }
         });
     }
+
+
+    /* 大事紀選單效果 */
+    (function(container){
+        var opt = $('#scroll', container).data();
+        console.log(opt);
+        opt.vertical = true;
+        opt.infinite = false;
+        $('#scroll', container).slick(opt);
+
+    }($('[role=events]')));
+    /* 大事紀選單效果 */
 });

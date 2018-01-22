@@ -3,12 +3,13 @@ $icon-font-path: '../fonts/';
 @import "common/override";
 // bower:scss
 @import "vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "vendor/slick-carousel/slick/slick.scss";
+@import "vendor/slick-carousel/slick/slick-theme.scss";
 // endbower
 @import "common/vbox";
 @import "common/variables";
 @import "common/global";
 @import "common/scratch";
-@import "common/side";
 @import "layouts/header";
 @import "layouts/footer";
 .wrap{

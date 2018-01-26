@@ -1,3 +1,10 @@
+body{
+    font-size: 0;
+    vertical-align: middle;
+    th,td{
+        vertical-align: middle;
+    }
+}
 .wrap{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -13,6 +20,8 @@
 	color: $text-color;
     font-family: $font-family-sans-serif;
     font-size: 14px;
+
+    white-space: normal;
 
     // @media screen and (max-width: 1000px) {
     //     background: #04091D;

@@ -108,6 +108,7 @@ gulp.task('fileinclude', function() {
         .pipe($.fileInclude())
         .pipe($.replaceName(/[-]tpl.html/ig, '.html'))
         .pipe($.bom())
+        .pipe($.htmlBeautify({indentSize: 2}))
         .pipe(gulp.dest('.tmp'));
 });
 

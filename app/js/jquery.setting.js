@@ -353,4 +353,18 @@ $(document).ready(function() {
     
     });
     /* 訊息視窗 */
+
+
+    /* 浮水印 */
+    if($('.watermark').length){
+        var watermark = $('.edit-area .watermark');
+        var watermarkText = $('.edit-area').data('watermark');
+        watermark.each(function(){
+            $(this).removeClass('watermark');
+            $('<span></span>')
+                .addClass('watermark')
+                .attr('alt', watermarkText)
+                .insertAfter(this).append(this);
+        });
+    }
 });

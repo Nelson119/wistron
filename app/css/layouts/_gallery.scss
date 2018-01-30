@@ -144,3 +144,33 @@
     margin-top: 8px;
     margin-bottom: 20px;
 }
+.slideshow-container{
+    max-height: 522px;
+    overflow: hidden;
+    .image-wrapper, a{
+        max-height: 522px;
+        height: 522px!important; 
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+    }img{
+        height: 522px; 
+        width: auto;
+    }
+}
+#gallery{
+    overflow: hidden;
+}
+div.caption-container{
+    max-width: 100%;
+    padding-top: 0.5em;
+}
+#thumbs{
+    float: right;
+}
+ul.thumbs li{
+    margin: 0 5px 5px 0;
+}
+ul.thumbs.cols3{
+    width: 215px;
+}

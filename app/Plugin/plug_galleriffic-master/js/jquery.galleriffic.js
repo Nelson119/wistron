@@ -965,6 +965,26 @@
 						gallery.next();
 						e.preventDefault();
 						break;
+					case 38: // left up
+						gallery.previous();
+						if($('#page2').length){
+							gallery.previous();
+							gallery.previous();
+						}else{
+							gallery.previous();
+						}
+						e.preventDefault();
+						break;
+					case 40: // right down
+						gallery.next();
+						if($('#page2').length){
+							gallery.next();
+							gallery.next();
+						}else{
+							gallery.next();
+						}
+						e.preventDefault();
+						break;
 				}
 			});
 		}

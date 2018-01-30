@@ -216,10 +216,11 @@ $(document).ready(function() {
 
     // Initialize Advanced Galleriffic Gallery
     if($('#thumbs').length){
+        var numThumbs = $('#page').length ? 12 : 18;
         
         var gallery = $('#thumbs').galleriffic({
             delay: 2500,
-            numThumbs: 12,
+            numThumbs: numThumbs,
             preloadAhead: 10,
             enableTopPager: false,
             enableBottomPager: true,

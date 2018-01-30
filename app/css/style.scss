@@ -6,9 +6,9 @@ script{
 }
 // bower:scss
 @import "vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "vendor/reset-css/_reset.scss";
 @import "vendor/slick-carousel/slick/slick.scss";
 @import "vendor/slick-carousel/slick/slick-theme.scss";
+@import "vendor/reset-css/_reset.scss";
 // endbower
 @import "common/vbox";
 @import "common/variables";
@@ -16,6 +16,7 @@ script{
 @import "common/scratch";
 @import "layouts/header";
 @import "layouts/footer";
+@import "layouts/messagebox";
 .wrap{
     @import "common/side";
     @import "layouts/main";

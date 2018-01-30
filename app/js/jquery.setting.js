@@ -215,7 +215,7 @@ $(document).ready(function() {
     });
 
     // Initialize Advanced Galleriffic Gallery
-    if($('#thumbs').lengh){
+    if($('#thumbs').length){
         
         var gallery = $('#thumbs').galleriffic({
             delay: 2500,
@@ -261,13 +261,96 @@ $(document).ready(function() {
 
 
     /* 大事紀選單效果 */
-    (function(container){
-        var opt = $('#scroll', container).data();
-        console.log(opt);
-        opt.vertical = true;
-        opt.infinite = false;
-        $('#scroll', container).slick(opt);
+    if($('[role=events]').length){
+        (function(container){
+            var opt = $('#scroll', container).data();
+            console.log(opt);
+            var count = $('li', container).length;
+            opt.vertical = true;
+            opt.infinite = false;
+            opt.centerMode = false;
+            $('#scroll', container).slick(opt).on('afterChange', function(e, slick, index) {
+                console.log(slick, index);
+                if(index == 0){
+                    $('.slick-prev').addClass('fade').removeClass('in');
+                    $('.slick-next').addClass('in');
+                }
+                if(index >= slick.slideCount - 10){
+                    $('.slick-next').addClass('fade').removeClass('in');
+                    $('.slick-prev').addClass('in');
+                }
+            });
+            if(opt.initialSlide == 0){
+                $('.slick-prev').addClass('fade').removeClass('in');
+                $('.slick-next').addClass('in');
+            }
+            if(opt.initialSlide >= count - 10){
+                $('.slick-next').addClass('fade').removeClass('in');
+                $('.slick-prev').addClass('in');
+            }
 
-    }($('[role=events]')));
+        }($('[role=events]')));
+    }
     /* 大事紀選單效果 */
+
+
+    /* 大聲公效果 */
+    if($('.marquee').length){
+        var opt = $('.marquee').data();        
+        var marquee = $('.marquee');
+        var speed = opt.speed || 10;
+        var vspeed = opt.vspeed || 1;
+        var gap = opt.gap || 5;
+
+        setInterval(function(){
+            var active = $('li.active', marquee);
+            var next = active.next().length ? active.next() : $('li:first', marquee);
+            // console.log('next', next);
+            next.addClass('active').siblings().removeClass('active');
+            marq();
+        }, gap*1000 + speed*1000 +vspeed*1000);
+
+        TweenMax.set($('li', marquee), {
+            top: '1.5em',
+            left: 0
+        });
+        marq();
+
+        function marq(){
+            var active = $('li.active', marquee);
+            var prev = active.prev().length ? active.prev() : $('li:last', marquee);
+            TweenMax.set(prev, {
+                top: '0em',
+                left: 0
+            });
+            TweenMax.set(active, {
+                top: '1.5em',
+                left: 0
+            });
+            TweenMax.to(prev, speed, {
+                left: marquee.width() < prev.width() ? marquee.width() - prev.width() : 0
+            });
+            TweenMax.to(prev, vspeed, {
+                top: '-1.5em',
+                delay: speed
+            });
+            TweenMax.to(active, vspeed, {
+                top: '0em',
+                delay: speed
+            });
+        }
+    }
+    /* 大聲公效果 */
+
+    
+    /* 訊息視窗 */
+    var vb = $('.veno').venobox({
+        cb_post_open  : function(obj, gallIndex, thenext, theprev){
+            $('.veno-close').on('click', function(){
+                vb.VBclose();
+            });
+        },
+    
+    });
+    /* 訊息視窗 */
 });

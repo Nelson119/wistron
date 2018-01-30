@@ -1,0 +1,30 @@
+@@include('skin/front.html',{
+	"title": "title",
+	"description": "description",
+	"keywords": "keywords",
+	"site": "site",
+	"url": "url",
+	"image": "image",
+	"icon": "icon",
+	"date": "{{date}}"
+})
+
+
+	@@include('common/header.html', {
+        "active1": "",
+        "active2": "",
+        "active3": "",
+        "active4": "",
+        "active5": ""
+    })
+
+    <div class="wrap">
+        <div class="content-wrap" role="gallery-detail">
+            @@include('common/page-title-wrapper.html', {"title": "Image Gallery"})
+            @@include('components/gallery-detail/photo-album-wrapper2.html')
+        </div>
+    </div>
+
+	@@include('common/footer.html')
+
+@@include('skin/butt.html')

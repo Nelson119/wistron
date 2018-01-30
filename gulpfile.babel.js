@@ -80,6 +80,9 @@ gulp.task('fonts', () => {
     gulp.src('app/Plugin/**/*')
         .pipe(gulp.dest('.tmp/Plugin'))
         .pipe(gulp.dest('dist/Plugin'));
+    gulp.src('app/download/**/*')
+        .pipe(gulp.dest('.tmp/download'))
+        .pipe(gulp.dest('dist/download'));
     return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function(err) {})
             .concat('app/fonts/**/*'))
         .pipe(gulp.dest('.tmp/fonts'))

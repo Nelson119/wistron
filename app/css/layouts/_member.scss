@@ -3,18 +3,13 @@
 
 /*團隊頁面*/
 
-.services-location-wrapper {
-    margin-top: 30px;
-    margin-bottom: 32px;
-    width: 100%;
-    position: relative;
-    .lang{
-        position: absolute;
-        right: 0;
-        img{
-            width: 2em;
-            height: 2em;
-        }
+.lang{
+    position: absolute;
+    left: 840px;
+    margin-top: -3em;
+    color: #999999;
+    &:hover{
+        color: #666;
     }
 }
 
@@ -35,7 +30,7 @@
 }
 
 .location-info-wrapper {
-    width: 50%;
+    width: 55%;
     float: left;
 }
 

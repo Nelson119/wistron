@@ -368,4 +368,20 @@ $(document).ready(function() {
                 .insertAfter(this).append(this);
         });
     }
+
+
+    /* 中英切換 */
+    if($('a.lang').length){
+        // var lang = $('.lang');
+        $('a.lang').on('click', function(e){
+            var lang = $('html').attr('lang');
+            if(/en.*/.test(lang)){
+                $('html').attr('lang', 'zh');
+            }else if(/zh.*/.test(lang)){
+                $('html').attr('lang', 'en');
+            }else{
+                $('html').attr('lang', 'zh');
+            }
+        });
+    }
 });

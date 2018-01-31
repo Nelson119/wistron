@@ -7,6 +7,15 @@
     margin-top: 30px;
     margin-bottom: 32px;
     width: 100%;
+    position: relative;
+    .lang{
+        position: absolute;
+        right: 0;
+        img{
+            width: 2em;
+            height: 2em;
+        }
+    }
 }
 
 .services-location-wrapper:after {
@@ -26,7 +35,7 @@
 }
 
 .location-info-wrapper {
-    width: 55%;
+    width: 50%;
     float: left;
 }
 

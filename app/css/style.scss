@@ -28,5 +28,21 @@ script{
         font-size: 100%;
     }
 }
+.watermark-container{
+    position: relative;
+    >*{
+        position: relative;
+        z-index: 1;
+    }
+    .watermark{
+        position: absolute;
+        z-index: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
 html.ie{
 }

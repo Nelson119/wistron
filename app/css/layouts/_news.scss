@@ -94,27 +94,3 @@ li.invisable:after {
     content: '下一則';
 }
 
-
-.edit-area{
-    .watermark{
-        position: relative;
-        display: inline-block;
-        &:before{
-            content: attr(alt);
-            color: #ddd;
-            font-size: 50px;
-            top: 50%;
-            width: 100%;
-            height: 1em;
-            text-align: center;
-            margin-top: -0.5em;
-            position: absolute;
-            z-index: 1;
-            opacity: 0.5;
-        }
-        >*{
-            position: relative;
-            z-index: 0;
-        }
-    }
-}

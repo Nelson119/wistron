@@ -18,8 +18,16 @@
         "active5": ""
     })
 
-    <div class="wrap">
-        <div class="content-wrap" role="news-singlepost">
+    <div class="wrap" data-watermark="Amily Chiou/WHQ/1019876" data-font-size="24" data-color="#e8e8e8" data-gap-width="224" data-gap-height="86" data-tilt="-15">
+        <!-- 
+            data-watermark: 浮水印文字
+            data-font-size: 浮水印的字級 
+            data-color: 浮水印的顏色 
+            data-gap-width: 字與字的水平間距
+            data-gap-height: 字與字的垂直間距 
+            *不支援ie9
+        -->
+        <div class="content-wrap watermark-container" role="news-singlepost"><!-- 要加浮水印的元素加上 watermark-container class -->
             @@include('common/page-title-wrapper.html', {"title": "News Center"})
             @@include('components/news/left-menu-wrapper.html')
             @@include('components/news-singlepost/middle-content-wrapper.html')

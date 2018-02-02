@@ -357,15 +357,40 @@ $(document).ready(function() {
 
 
     /* 浮水印 */
-    if($('.watermark').length){
-        var watermark = $('.edit-area .watermark');
-        var watermarkText = $('.edit-area').data('watermark');
-        watermark.each(function(){
-            $(this).removeClass('watermark');
-            $('<span></span>')
-                .addClass('watermark')
-                .attr('alt', watermarkText)
-                .insertAfter(this).append(this);
+    if($('.watermark-container').length){
+        var container = $('.watermark-container');
+        var watermarkText = $('[data-watermark]').data('watermark');
+        // console.log(container);
+        // console.log(watermarkText);
+        container.each(function(){
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+
+            var option = $('[data-watermark]').data();
+            var tilt = option.tilt = option.tilt * Math.PI / 180 || -15 * Math.PI / 180;
+            var fontSize = option.fontSize = option.fontSize || 24;
+            var gapWidth = option.gapWidth = option.gapWidth || 224;
+            var gapHeight = option.gapHeight = option.gapHeight || 86;
+            var color = option.color = option.color || '#e8e8e8';
+            var font = option.font = fontSize + 'px Arial';
+            var tiltOffset = option.tiltOffset =  Math.sin(-tilt) * (ctx.measureText(watermarkText).width + option.fontSize);
+            // console.log(option);
+            tiltOffset = 80;
+            
+            ctx.save();
+            canvas.width = ctx.measureText(watermarkText).width * 2 + gapWidth*1.5;
+            canvas.height = fontSize*2 + gapHeight * 2;
+            ctx.font = font;
+            ctx.fillStyle = color;
+            ctx.rotate(tilt);
+            ctx.fillText(watermarkText, gapWidth, gapHeight + fontSize * 2 + tiltOffset);
+            ctx.fillText(watermarkText, 0, fontSize + tiltOffset);
+
+            
+            var dataurl = canvas.toDataURL();
+            var watermark = document.createElement('i');
+            watermark.style.backgroundImage = 'url('+dataurl+')';
+            $(watermark).addClass('watermark').appendTo(this);
         });
     }
 

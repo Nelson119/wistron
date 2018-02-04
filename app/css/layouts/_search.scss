@@ -1,0 +1,22 @@
+
+/*搜尋*/
+[role=search]{
+    .middle-content-wrapper{
+        width: 1192px;
+        position: relative;
+        margin: 0 auto;
+        h3{
+            font-size: 32px;
+            color: #4A4A4A;
+            height: 45px;
+        }
+        hr{
+            margin: 9px 0 20px;
+            border-color: #ccc;
+        }
+    }
+    .result,.input{
+        width: 960px;
+        margin: 0 auto;
+    }
+}

@@ -409,4 +409,75 @@ $(document).ready(function() {
             }
         });
     }
+
+
+    /* 搜尋 */
+    if($('[role=search]').length){
+        var searchContainer = $('[role=search]');
+        var searchOpt = window.searchOpt = {
+            page: 1,
+            limits: 10
+        };
+        if(getParam('q')){
+            search({
+                keyword: getParam('q')
+            });
+        }
+        function initfilters(filters, currentFilter){
+            var tabs = $('.tabs', searchContainer);
+            var menu = $('.filters', searchContainer);
+            $.each(filters, function(){
+                var label = $('<label></label>').html(this.name);
+                if(this.name == currentFilter.name){
+                    label.addClass('active');
+                    $.each(this.filterContents, function(){
+                        var label = $('<label></label>').html(this);
+                        var li = $('<li></li>').append(label);
+                        if(this == currentFilter.content){
+                            label.addClass('active');
+                        }
+                        menu.append(li);
+                    });
+                }
+                tabs.append(label);
+            });
+        }
+        function result(data){
+            var list = $('.result .list', searchContainer);
+            $.each(data, function(){
+                var article = this;
+                var tpl = $('.tpl .'+article.type+'-result', searchContainer).clone();
+                $.each(article, function(field, value){
+                    $('.'+field, tpl).html(value);
+                });
+                var li = $('<li></li>').append(tpl);
+                list.append(li);
+            });
+        }
+        function search(opt){
+            if(opt){
+                $.each(opt, function(field, value){
+                    searchOpt[field] = value;
+                });
+            }
+            $.ajax({
+                url: 'search.json',
+                data: searchOpt,
+                method: 'get'
+            }).success(function(r){
+                initfilters(r.filters, r.currentFilter)
+                result(r.data);
+            }).fail(function(e){
+                console.log(e.responseText);
+            });
+        }
+    }
 });
+function getParam(name){
+    var r = new RegExp('^.*[?&]'+name+'[=]([^&]+).*$', 'i');
+    if(!r.test(location.search)){
+        return null;
+    }
+    var value = location.search.replace(r,'$1');
+    return decodeURIComponent(value);
+};

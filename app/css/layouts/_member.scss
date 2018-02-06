@@ -5,11 +5,16 @@
 
 .lang{
     position: absolute;
-    left: 840px;
-    margin-top: -3em;
-    color: #999999;
-    &:hover{
-        color: #666;
+    right: 0;
+    width: auto;
+    bottom: 1em;
+    a{
+        color: #999999;
+        font-size: 14px;
+        &:hover{
+            color: #016F97;
+            font-weight: bold;
+        }
     }
 }
 
@@ -20,17 +25,18 @@
 }
 
 .location-img {
-    width: 45%;
+    width: 512px;
     float: left;
 }
 
 .location-img img {
-    width: 280px;
+    width: 100%;
     height: auto;
 }
 
 .location-info-wrapper {
-    width: 55%;
+    width: 425px;
+    margin-left: 24px;
     float: left;
 }
 
@@ -41,7 +47,9 @@
 }
 
 .location-info-wrapper p {
-    line-height: 1.2;
+    line-height: 2;
+    margin-top: 8px;
+    font-size: 16px;
 }
 
 .team-group {
@@ -62,7 +70,8 @@
 }
 
 .scroll {
-    width: 640px;
+    // width: 640px;
+    width: auto;
     height: 250px;
     overflow-y: hidden;
 }
@@ -84,4 +93,42 @@
 .member-desc h4 {
     margin-top: 12px;
     margin-bottom: 10px;
+}
+
+[role=member]{
+    .middle-content-wrapper{
+        width: 1000px;
+    }
+    .left-menu-wrapper{
+        width: 156px;
+        ul{
+            width: 100%;
+        }
+    }
+    .page-title-wrapper{
+        position: relative;
+        display: block;
+    }
+    .h2-title{ 
+        width: 100%;
+        h2{
+            width: 100%;
+            position: relative;
+        }
+    }
+    .slick-dots{
+        bottom: 16px;
+        button{
+            width: 12px;
+            height: 12px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            &:before{
+                color: transparent;
+            }
+        }
+        .slick-active button{
+            background: #fff;
+        }
+    }
 }

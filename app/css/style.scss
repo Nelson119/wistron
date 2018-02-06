@@ -1,9 +1,6 @@
 $icon-font-path: '../fonts/';
 @import "common/webfonts";
 @import "common/override";
-script{
-    display: none;
-}
 // bower:scss
 @import "vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "vendor/slick-carousel/slick/slick.scss";

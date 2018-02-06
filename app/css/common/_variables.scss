@@ -216,6 +216,14 @@ $font-white-color: #fff;
 html[lang="en"] .visible-en, html[lang="zh"] .visible-zh, html[lang="tai"] .visible-tai{
 	display: block;
 }
+html[lang="en"] .lang .en, html[lang="zh"] .lang .zh{
+	
+	color: #016F97;
+	font-weight: bold;
+}
+ .lang .en{
+	font-size: 18px;
+}
 
 // html[lang="en"] .visible-en-inline, html[lang="zh"] .visible-zh-inline, html[lang="tai"] .visible-tai-inline{
 // 	display: inline;

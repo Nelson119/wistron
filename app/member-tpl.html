@@ -19,8 +19,22 @@
     })
 
     <div class="wrap">
-        <div class="content-wrap" role="member">
-            @@include('common/page-title-wrapper.html', {"title": "Global Operation"})
+        <div class="content-wrap" role="member">
+            <!--page-title-wrapper-->
+            <div class="page-title-wrapper">
+                <div class="h2-title">
+                    <h2>Global Operations</h2>
+                </div>
+                <nav class="lang">
+                    <a class="en" href="javascript:">
+                        <span>English</span>
+                    </a>
+                    <a class="zh" href="javascript:">
+                        <span>中文</span>
+                    </a>
+                </nav>
+            </div>
+            <!--./page-title-wrapper-->
             @@include('components/member/left-menu-wrapper.html')
             @@include('components/member/middle-content-wrapper.html')
         </div>

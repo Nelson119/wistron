@@ -396,17 +396,19 @@ $(document).ready(function() {
 
 
     /* 中英切換 */
-    if($('a.lang').length){
+    if($('.lang').length){
         // var lang = $('.lang');
-        $('a.lang').on('click', function(e){
-            var lang = $('html').attr('lang');
-            if(/en.*/.test(lang)){
-                $('html').attr('lang', 'zh');
-            }else if(/zh.*/.test(lang)){
-                $('html').attr('lang', 'en');
-            }else{
-                $('html').attr('lang', 'zh');
-            }
+        $('.lang a.en').on('click', function(e){
+            $('html').attr('lang', 'en');
+        });
+        $('.lang a.zh').on('click', function(e){
+            $('html').attr('lang', 'zh');
+        });
+    }
+    if($('[role=member] .location-img').length){
+        $('[role=member] .location-img').slick({
+            arrows: false,
+            dots: true
         });
     }
 

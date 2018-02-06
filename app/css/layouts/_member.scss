@@ -103,6 +103,9 @@
         width: 156px;
         ul{
             width: 100%;
+            a{
+                white-space: nowrap;
+            }
         }
     }
     .page-title-wrapper{

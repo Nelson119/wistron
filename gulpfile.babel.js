@@ -83,6 +83,9 @@ gulp.task('fonts', () => {
     gulp.src('app/download/**/*')
         .pipe(gulp.dest('.tmp/download'))
         .pipe(gulp.dest('dist/download'));
+    gulp.src('app/viewerjs/**/*')
+        .pipe(gulp.dest('.tmp/viewerjs'))
+        .pipe(gulp.dest('dist/viewerjs'));
     return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function(err) {})
             .concat('app/fonts/**/*'))
         .pipe(gulp.dest('.tmp/fonts'))
@@ -124,7 +127,8 @@ gulp.task('serve', ['css', 'js', 'fonts', 'fileinclude'], () => {
             routes: {
                 '/vendor': 'vendor',
                 '/Plugin': 'app/Plugin',
-                '/css': '.tmp/css',
+                '/css': '.tmp/css'
+                // '/viewerjs': 'vendor/viewerjs/ViewerJS',
             }
         }
     });

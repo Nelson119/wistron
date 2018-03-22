@@ -43,3 +43,11 @@ $icon-font-path: '../fonts/';
 }
 html.ie{
 }
+
+[role=pdf-viewer]{
+    iframe{
+        #download{
+            display: none;
+        }
+    }
+}

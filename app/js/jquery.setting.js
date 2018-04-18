@@ -303,21 +303,11 @@ $(document).ready(function() {
         var vspeed = opt.vspeed || 1;
         var gap = opt.gap || 5;
 
-        setInterval(function(){
-            var active = $('li.active', marquee);
-            var next = active.next().length ? active.next() : $('li:first', marquee);
-            // console.log('next', next);
-            next.addClass('active').siblings().removeClass('active');
-            marq();
-        }, gap*1000 + speed*1000 +vspeed*1000);
-
-        TweenMax.set($('li', marquee), {
-            top: '1.5em',
-            left: 0
-        });
-        marq();
 
         function marq(){
+            if($('.marquee.pause').length){
+                return false;
+            }
             var active = $('li.active', marquee);
             var prev = active.prev().length ? active.prev() : $('li:last', marquee);
             TweenMax.set(prev, {
@@ -340,6 +330,34 @@ $(document).ready(function() {
                 delay: speed
             });
         }
+        TweenMax.set($('li', marquee), {
+            top: '1.5em',
+            left: 0
+        });
+        // 2018/4/7 修改為麗開分頁時先暫停動作 修正大聲公重疊問題
+        $('.marquee').addClass('pause');
+        $(window).on('mousemove', function(){
+            if(!$('.marquee.pause').length){
+                return;
+            }
+            $('.marquee').removeClass('pause');
+            TweenMax.set($('li', marquee), {
+                top: '1.5em',
+                left: 0
+            });
+            setInterval(function(){
+                var active = $('li.active', marquee);
+                var next = active.next().length ? active.next() : $('li:first', marquee);
+                // console.log('next', next);
+                next.addClass('active').siblings().removeClass('active');
+                marq();
+            }, gap*1000 + speed*1000 +vspeed*1000);
+    
+        }).trigger('mousemove');
+        $(window).on('mouseout', function(){
+            $('.marquee').addClass('pause');
+            TweenMax.killAll();
+        }).trigger('mouseout');
     }
     /* 大聲公效果 */
 
@@ -350,7 +368,7 @@ $(document).ready(function() {
             $('.veno-close').on('click', function(){
                 vb.VBclose();
             });
-        },
+        }
     
     });
     /* 訊息視窗 */

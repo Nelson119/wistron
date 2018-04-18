@@ -9,7 +9,9 @@ $(document).ready(function() {
 
 	function updateTime(){
 	  var currentTime = new Date();
-	  var hrs = currentTime.getHours();
+		var hrs = currentTime.getHours();
+		var realtime = moment().format('YYYY/MM/DD, hh:mm:ss a').toUpperCase();
+		$('.location-map .desc p').html(realtime);
 	  if(hrs>12){
 	    hrs = hrs-12;
 	  }

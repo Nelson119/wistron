@@ -140,6 +140,7 @@ gulp.task('serve', ['css', 'js', 'fonts', 'fileinclude'], () => {
     ]).on('change', reload);
 
     gulp.watch('app/css/**/*.scss', ['css']);
+    gulp.watch('app/Plugin/**/*.js', ['js']);
     gulp.watch('app/js/**/*.js', ['js']);
     gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('app/**/*.html', ['fileinclude']);

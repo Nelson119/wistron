@@ -13,7 +13,8 @@
     "owl.carousel": "^2.2.1",
     "slick-carousel": "^1.8.1",
     "reset-css": "^2.2.1",
-    "jquery.marquee": "jQuery.Marquee#^1.5.0"
+    "jquery.marquee": "jQuery.Marquee#^1.5.0",
+    "moment": "^2.22.0"
   },
   "overrides": {
     "reset-css": {
